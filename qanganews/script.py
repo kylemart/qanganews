@@ -47,8 +47,7 @@ def get_submissions(config):
     keyfile_dict = json.loads(config['sheet']['credentials'])
     credentials = ServiceAccountCredentials.from_json_keyfile_dict(keyfile_dict)
     client = gspread.authorize(credentials)
-    key = config['sheet']['key']
-    spreadsheet = client.open_by_key(key)
+    spreadsheet = client.open_by_key(config['sheet']['key'])
     records = spreadsheet.sheet1.get_all_records()
     columns = {
         config['sheet']['timestamp-col']: 'ts',
