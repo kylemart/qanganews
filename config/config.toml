@@ -1,0 +1,33 @@
+# Usage:
+# Fill out the properties below, then uncomment them.
+# 
+# References:
+# 1. Request Plex token: https://forums.plex.tv/t/how-to-request-a-x-plex-token-token-for-your-app/84551/36
+# 2. Google sheets auth, etc: https://gspread.readthedocs.io/en/latest/
+#
+
+# [plex]
+# token = ""
+
+# [tautulli]
+# host = ""
+# port = 0
+# notifiers = [
+#     # { cadence = "Biweekly", notifier_id = 123 },
+# ]
+
+# [email]
+# server = ""
+# port = 0
+# tls = true
+# username = ""
+# password = ""
+
+# [sheet]
+# timestamp-col = "Timestamp"
+# email-col = "Email Address"
+# cadence-col = "How often would you like to receive newsletters?"
+# key = ""
+# credentials = '''
+# 
+# '''
