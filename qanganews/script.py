@@ -102,7 +102,7 @@ def update_notifiers(config, cooked):
             'friendly_name': f'Newsletter Group - {row.cadence}'
         })
         logger.info(f'Updated notifier - notifier:"{row.cadence}", success:"{response.ok}"')
-        logger.debug(f'Update details - emails:{row["emails"]}')
+        logger.debug(f'Update details - emails:{row.emails}')
         
 
 def main():
@@ -124,11 +124,10 @@ def main():
             get_notifiers(config)
         )
         update_notifiers(config, cooked)
+        logger.info('Completed tasks(s).')
     except Exception:
         logger.error('Unexpected task error. See stderr for info.')
         raise
-    finally:
-        logger.info('Completed tasks(s).')
         
 
 if __name__ == '__main__':
