@@ -111,8 +111,8 @@ def main():
     try:
         logger.info('Loading config file...')
         config = toml.load('config/config.toml')
-    except FileNotFoundError:
-        logger.error('Config file was not found.')
+    except (FileNotFoundError, IOError):
+        logger.error('Config file could not be loaded.')
         raise
     except Exception:
         logger.error('Config file is not valid toml.')
