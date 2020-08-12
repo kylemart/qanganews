@@ -126,7 +126,7 @@ def main():
         )
         update_notifiers(config, cooked)
     except Exception:
-        logger.error('Unexpected error. See stderr for info.')
+        logger.error('Unexpected task error. See stderr for info.')
         raise
     finally:
         logger.info('Completed tasks(s)')
