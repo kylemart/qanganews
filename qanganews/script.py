@@ -2,7 +2,6 @@ from datetime import datetime
 import json
 import logging
 import os
-import re
 import sys
 
 from oauth2client.service_account import ServiceAccountCredentials
