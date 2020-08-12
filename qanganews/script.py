@@ -129,7 +129,7 @@ def main():
         logger.error('Unexpected task error. See stderr for info.')
         raise
     finally:
-        logger.info('Completed tasks(s)')
+        logger.info('Completed tasks(s).')
         
 
 if __name__ == '__main__':
